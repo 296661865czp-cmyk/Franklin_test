@@ -1,0 +1,110 @@
+.compare-panel {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--bgInput);
+  border: 1px solid var(--border);
+  font-size: 11px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  display: none;
+}
+
+.compare-panel.show {
+  display: block;
+}
+
+.compare-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.compare-label {
+  color: var(--textMuted);
+  font-size: 11px;
+}
+
+.jump-btn {
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid;
+  font-size: 10px;
+  cursor: pointer;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  background: transparent;
+}
+
+.compare-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.compare-sense-label {
+  width: 40px;
+  font-size: 10px;
+}
+
+.compare-bar-group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.compare-item1 {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.compare-item1-val {
+  color: var(--textSecondary);
+  min-width: 24px;
+}
+
+.compare-bar {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.compare-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+}
+
+.compare-diff {
+  font-size: 10px;
+  min-width: 32px;
+  text-align: center;
+}
+
+.diff-equal {
+  color: var(--green);
+}
+
+.diff-diff {
+  color: var(--rose);
+}
+
+.compare-item2 {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.compare-item2 .compare-bar {
+  order: -1;
+}
+
+.compare-item2-val {
+  color: var(--textSecondary);
+  min-width: 24px;
+}

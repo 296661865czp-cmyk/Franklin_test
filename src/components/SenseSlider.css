@@ -1,0 +1,124 @@
+.sense-slider-container,
+.add-sense-slider-container,
+.wish-sense-slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sense-slider-row,
+.add-sense-slider-row,
+.wish-sense-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sense-label,
+.add-sense-label,
+.wish-sense-label {
+  width: 50px;
+  font-size: 12px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  flex-shrink: 0;
+}
+
+.sense-track,
+.add-sense-track,
+.wish-sense-track {
+  flex: 1;
+  position: relative;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--border);
+  cursor: pointer;
+}
+
+.add-sense-track {
+  height: 6px;
+}
+
+.sense-track-fill,
+.add-sense-track-fill,
+.wish-sense-track-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.05s;
+}
+
+.sense-thumb,
+.add-sense-thumb,
+.wish-sense-thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+  transition: box-shadow 0.2s, transform 0.1s;
+  touch-action: none;
+}
+
+.add-sense-thumb {
+  width: 14px;
+  height: 14px;
+}
+
+.sense-thumb:hover,
+.add-sense-thumb:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sense-thumb:active,
+.add-sense-thumb:active {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.sense-input,
+.add-sense-input,
+.wish-sense-input {
+  width: 40px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--bgInput);
+  color: var(--textPrimary);
+  font-size: 11px;
+  text-align: center;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.add-sense-input {
+  font-size: 12px;
+}
+
+.sense-input:focus,
+.add-sense-input:focus,
+.wish-sense-input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+/* Remove number input spinners */
+.sense-input::-webkit-outer-spin-button,
+.sense-input::-webkit-inner-spin-button,
+.add-sense-input::-webkit-outer-spin-button,
+.add-sense-input::-webkit-inner-spin-button,
+.wish-sense-input::-webkit-outer-spin-button,
+.wish-sense-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.sense-input[type=number],
+.add-sense-input[type=number],
+.wish-sense-input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,185 @@
+.add-container {
+  width: 100%;
+  max-width: 540px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.add-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.add-title {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.add-title h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 8px 0;
+  font-family: 'ZCOOL XiaoWei', 'Noto Serif SC', serif;
+  letter-spacing: 6px;
+  color: var(--accent);
+}
+
+.add-title p {
+  font-size: 13px;
+  color: var(--textMuted);
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.add-form {
+  width: 100%;
+  max-width: 500px;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(196, 137, 58, 0.3);
+  background: var(--bgCard);
+}
+
+.add-success {
+  font-size: 14px;
+  color: var(--green);
+  margin-bottom: 12px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  text-align: center;
+  padding: 8px 0;
+  display: none;
+}
+
+.add-success.show {
+  display: block;
+}
+
+.add-hints-box {
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(196, 137, 58, 0.08);
+  border: 1px solid rgba(196, 137, 58, 0.25);
+  margin-bottom: 16px;
+}
+
+.add-hints-label {
+  font-size: 11px;
+  color: var(--gold);
+  margin-bottom: 4px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.add-hints-text {
+  font-size: 13px;
+  color: var(--textSecondary);
+  line-height: 1.5;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.add-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  background: var(--bgInput);
+  color: var(--textPrimary);
+  font-size: 15px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.add-input:focus,
+.add-textarea:focus,
+.add-select:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.add-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.add-select {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bgInput);
+  color: var(--textPrimary);
+  font-size: 13px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.add-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  background: var(--bgInput);
+  color: var(--textPrimary);
+  font-size: 13px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  resize: vertical;
+}
+
+.add-sense-title {
+  font-size: 12px;
+  color: var(--textMuted);
+  margin-bottom: 8px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.add-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.add-submit-btn {
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(196, 137, 58, 0.4);
+  background: rgba(196, 137, 58, 0.15);
+  color: var(--gold);
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.add-submit-btn:disabled {
+  background: transparent;
+  color: var(--textMuted);
+  cursor: default;
+}
+
+.add-submit-btn:not(:disabled):hover {
+  background: rgba(196, 137, 58, 0.25);
+}
+
+.add-cancel-btn {
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--textMuted);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}

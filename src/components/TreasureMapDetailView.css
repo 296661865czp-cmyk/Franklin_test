@@ -1,0 +1,221 @@
+.treasure-map-detail-view {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg);
+  position: relative;
+}
+
+.treasure-map-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px 8px;
+}
+
+.treasure-map-detail-title {
+  padding: 0 24px 16px;
+}
+
+.treasure-map-detail-title h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 8px 0;
+  color: var(--accent);
+  font-family: 'ZCOOL XiaoWei', 'Noto Serif SC', serif;
+  letter-spacing: 4px;
+}
+
+.treasure-map-detail-title p {
+  font-size: 13px;
+  color: var(--textSecondary);
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  line-height: 1.5;
+}
+
+.treasure-map-detail-progress {
+  padding: 0 24px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.treasure-map-detail-progress-bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.treasure-map-detail-progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--purple);
+  transition: width 0.3s ease;
+}
+
+.treasure-map-detail-progress-text {
+  font-size: 13px;
+  color: var(--purple);
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  min-width: 50px;
+  text-align: right;
+}
+
+.treasure-map-items {
+  padding: 0 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.treasure-map-item-card {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bgCard);
+  transition: all 0.25s;
+}
+
+.treasure-map-item-card.explored {
+  opacity: 0.7;
+  background: rgba(122, 170, 138, 0.05);
+}
+
+.treasure-map-item-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.treasure-map-item-status-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.treasure-map-item-status-icon.unexplored {
+  border: 2px solid var(--border);
+  color: var(--textMuted);
+}
+
+.treasure-map-item-status-icon.explored {
+  background: var(--greenGlow);
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+
+.treasure-map-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.treasure-map-item-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--textPrimary);
+  margin-bottom: 4px;
+}
+
+.treasure-map-item-domain {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  display: inline-block;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.treasure-map-item-description {
+  font-size: 12px;
+  color: var(--textMuted);
+  line-height: 1.5;
+  margin-top: 8px;
+  padding-left: 40px;
+}
+
+.treasure-map-item-hints {
+  font-size: 12px;
+  color: var(--gold);
+  line-height: 1.5;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(196, 137, 58, 0.08);
+  border-left: 2px solid rgba(196, 137, 58, 0.5);
+  margin-left: 40px;
+}
+
+.treasure-map-item-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  padding-left: 40px;
+}
+
+.treasure-map-explore-btn {
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  border: 1px solid rgba(155, 138, 191, 0.4);
+  background: rgba(155, 138, 191, 0.15);
+  color: var(--purple);
+  transition: all 0.2s;
+}
+
+.treasure-map-explore-btn:hover {
+  background: rgba(155, 138, 191, 0.25);
+}
+
+.treasure-map-explore-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.treasure-map-view-collection-btn {
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  border: 1px solid rgba(122, 170, 138, 0.4);
+  background: rgba(122, 170, 138, 0.1);
+  color: var(--green);
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.treasure-map-view-collection-btn:hover {
+  background: rgba(122, 170, 138, 0.2);
+}
+
+@media (max-width: 640px) {
+  .treasure-map-detail-header {
+    padding: 12px 16px 8px;
+  }
+
+  .treasure-map-detail-title h2 {
+    font-size: 22px;
+  }
+
+  .treasure-map-detail-title,
+  .treasure-map-detail-progress,
+  .treasure-map-items {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .treasure-map-item-description,
+  .treasure-map-item-hints,
+  .treasure-map-item-actions {
+    padding-left: 0;
+  }
+}

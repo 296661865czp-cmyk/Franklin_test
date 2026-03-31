@@ -1,0 +1,49 @@
+/* ==================== CSS 变量 ==================== */
+:root {
+  --bg: #f7f0e3;
+  --bgCard: #fffdf8;
+  --bgInput: #f2ebe0;
+  --border: #e0d4c0;
+  --textPrimary: #3d2b1f;
+  --textSecondary: #7a5c40;
+  --textMuted: #a08060;
+  --gold: #c4893a;
+  --goldGlow: rgba(196,137,58,0.10);
+  --blue: #7a9ebf;
+  --blueGlow: rgba(122,158,191,0.10);
+  --rose: #c47878;
+  --roseGlow: rgba(196,120,120,0.10);
+  --green: #7aaa8a;
+  --greenGlow: rgba(122,170,138,0.10);
+  --purple: #9b8abf;
+  --purpleGlow: rgba(155,138,191,0.10);
+  --orange: #d4825a;
+  --teal: #7aabbb;
+  --pink: #b87ab0;
+  --danger: #b85050;
+  --accent: #722f37;
+  --accentLight: rgba(114,47,55,0.08);
+  --accentBorder: rgba(114,47,55,0.25);
+}
+
+/* ==================== 基础重置 ==================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--textPrimary);
+  font-family: 'Noto Serif SC', 'Georgia', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

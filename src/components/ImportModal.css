@@ -1,0 +1,280 @@
+.import-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.import-modal {
+  background: var(--bg);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border);
+}
+
+.import-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.import-modal-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.import-modal-close {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: var(--textMuted);
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  font-family: monospace;
+}
+
+.import-modal-close:hover {
+  background: var(--border);
+}
+
+.import-modal-body {
+  padding: 20px;
+}
+
+.import-error-msg {
+  background: rgba(180, 60, 60, 0.1);
+  border: 1px solid rgba(180, 60, 60, 0.3);
+  color: #b43c3c;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.import-desc {
+  color: var(--textMuted);
+  font-size: 13px;
+  margin: 0 0 12px 0;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.import-file-input {
+  display: none;
+}
+
+.import-preview {
+  background: var(--bgSecondary);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.preview-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 12px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.preview-stats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.preview-stat {
+  flex: 1;
+  min-width: 60px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.preview-stat .stat-num {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.preview-stat .stat-label {
+  display: block;
+  font-size: 11px;
+  color: var(--textMuted);
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.preview-stat.new .stat-num {
+  color: var(--green);
+}
+
+.preview-stat.update .stat-num {
+  color: var(--gold);
+}
+
+.preview-stat.invalid .stat-num {
+  color: #b43c3c;
+}
+
+.preview-errors {
+  background: rgba(180, 60, 60, 0.06);
+  border: 1px solid rgba(180, 60, 60, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.preview-errors-title {
+  font-size: 12px;
+  color: #b43c3c;
+  margin-bottom: 6px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.preview-error-item {
+  font-size: 11px;
+  color: #b43c3c;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  padding: 2px 0;
+}
+
+.preview-error-more {
+  font-size: 11px;
+  color: var(--textMuted);
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  margin-top: 4px;
+}
+
+.import-mode-section {
+  margin-top: 16px;
+}
+
+.mode-label {
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 8px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  font-weight: 500;
+}
+
+.mode-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.mode-option:hover {
+  border-color: var(--gold);
+}
+
+.mode-option input[type="radio"] {
+  margin-top: 3px;
+  accent-color: var(--gold);
+}
+
+.mode-option .mode-title {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.mode-option .mode-desc {
+  display: block;
+  font-size: 11px;
+  color: var(--textMuted);
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  margin-top: 1px;
+}
+
+.import-modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.import-btn {
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--textMuted);
+  transition: all 0.15s;
+}
+
+.import-btn.primary {
+  background: var(--gold);
+  color: #fff;
+  border-color: var(--gold);
+}
+
+.import-btn.primary:hover {
+  opacity: 0.9;
+}
+
+.import-btn.secondary:hover {
+  background: var(--border);
+}
+
+.import-loading {
+  text-align: center;
+  padding: 32px 0;
+  color: var(--textMuted);
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.import-result {
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 14px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  border-radius: 12px;
+}
+
+.import-result.success {
+  background: rgba(122, 170, 138, 0.1);
+  color: var(--green);
+}
+
+.import-result.error {
+  background: rgba(180, 60, 60, 0.1);
+  color: #b43c3c;
+}

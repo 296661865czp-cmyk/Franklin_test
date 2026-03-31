@@ -1,0 +1,41 @@
+.filters-section {
+  padding: 8px 24px 6px;
+  font-size: 11px;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.filter-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.filter-label {
+  color: var(--textMuted);
+  min-width: 32px;
+}
+
+.filter-chip {
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--textMuted);
+  font-size: 11px;
+  cursor: pointer;
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.filter-chip:hover {
+  border-color: var(--textSecondary);
+}
+
+.filter-chip.active {
+  background: var(--goldGlow);
+  border-color: var(--gold);
+  color: var(--gold);
+}
